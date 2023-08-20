@@ -1,0 +1,302 @@
+*
+{
+  padding: 0%;
+  margin:0;
+  scroll-behavior: smooth;
+}
+
+body
+
+{
+ 
+    background: radial-gradient(circle, rgb(56, 52, 52), rgb(70, 70, 61), black);
+  color: white;
+}
+/* ... (your existing CSS rules) ... */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.logo
+{
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 1rem;
+  border-radius: 3rem;
+
+}
+.navbar
+{
+  background-color:gold;
+height: 4.7rem;
+
+}
+
+.navTitle
+{
+color: black;
+margin-left: 6rem;
+padding-top: 1.5rem;
+font-family: "Neue Haas Grotesk Text Pro", sans-serif;;
+
+}
+.topCurr
+{
+  /* color: #ffffff; */
+  text-align: center;
+
+}
+
+
+
+
+
+
+/* global stats */
+.stats
+{
+  font-weight: 200;
+  margin-top: 0.8rem;
+}
+.globalData
+{
+  font-weight: 600;
+  font-size: 1.5rem;
+
+}
+
+.card
+{
+  position: absolute;
+
+  font-size: 2rem;
+}
+
+.cardInfo{
+  font-size: 1rem;
+font-weight: 700;
+}
+
+.crypto-card
+{
+  width: 35px;
+  font-size: 2rem;
+ 
+} 
+.ant-card-head-wrapper
+{
+font-size: 1.5rem;
+}
+.crypto-image{
+  width:39px;
+ 
+}
+
+.homepadd
+{
+ padding: 2rem;
+}
+
+.Coininfoimg
+{
+  width:100px;
+  
+}
+
+.global
+{
+
+  background-color:white;
+  color: black;
+  padding: 10px;
+  padding-left: 2rem;
+  border-radius: 2rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+.news
+{
+  padding-left: 5rem;
+  padding-right: 6rem; 
+  margin-top: 4rem;
+}
+
+
+/* latest news */
+.navOfNews
+{
+  position: absolute;
+   margin-left: 50rem;
+   margin-top: 5px;
+    text-shadow: 2px 2px 4px rgba(236, 226, 226, 0.2);
+   
+
+}
+.newsImg
+{
+  width: 110px;
+  height: 75px;
+  position: absolute;
+  margin-left: 35rem;
+  border-radius: 1rem;
+  
+}
+
+.newDate
+{
+  color: white;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-decoration: underline;
+    font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+}
+.newsDes
+{
+
+  margin-right: 10rem;
+  font-size: 1rem;
+  font-family: "Neue Haas Grotesk Text Pro", sans-serif
+
+}
+.newsHeading
+{
+  margin-right: 10rem;
+  font-size: 1.4rem;
+  font-family: "Roslindale Display Bold", serif;
+  color: gold;
+}
+.view
+{
+
+  position: absolute;
+  margin-left: 37rem;
+  margin-top: 5rem
+}
+.scrolling-outer {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-container {
+  display: flex;
+  flex-direction: column;
+  animation: scrollText 40s linear infinite;
+}
+
+.scrolling-container:hover {
+  animation-play-state: paused;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile users */
+@media (max-width: 768px) {
+ 
+
+  .navbar{
+    background-color: black;
+    height: 4.7rem;
+    width: 34rem;
+  }
+
+  .navOfNews
+{
+  position: absolute;
+    margin-left: 10rem;
+    margin-top: 25rem;
+    
+}
+.global
+{
+
+  background-color: rgb(221, 221, 221);
+  padding: 10px;
+  padding-left: 2rem;
+  border-radius: 0;
+  margin: 0;
+
+}
+.news
+{
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+.newsImg{
+  width: 110px;
+  height: 75px;
+  position: absolute;
+  margin-left: 25rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+.view
+  
+{
+  color: blue;
+  position: absolute;
+  margin-left: 27.3rem;
+  margin-top: 6rem;
+
+}
+  .homepadd
+{
+ padding: 2rem;
+}
+ 
+.navTitle
+{
+color: black;
+font-weight: 400;
+margin-left: 6rem;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+}
+
+
