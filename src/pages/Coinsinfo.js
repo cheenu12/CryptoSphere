@@ -1,25 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-const url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'e7aa6cb4f4msha003796ba1c786ep185107jsn23560cfa2098',
-		'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
-	}
-};
-const response = await fetch(url, options);
-	const result = await response.text();
-    const data = JSON.parse(result); 
-    var arr= data.data.coins;
-	console.log(arr);
+import arr from '../components/Api';
+
+var arr2 = arr.coins;
  
   function che (yoyo) 
   {
     console.log("i am called");
    
   var object = {name : "" , price : "" , img: ""};
-    arr.filter(function(x)
+    arr2.filter(function(x)
     {
       
       if(yoyo === x.uuid )
@@ -47,8 +37,8 @@ const Coinsinfo = () => {
     <div>
       <br />
       <img className='Coininfoimg' alt={object2.name} src={object2.img} /> 
-    <h2> Name:  {object2.name} </h2>
-    <h2> Price  {object2.price}</h2>
+    <h2 className='coininfo'> Name:  {object2.name} </h2>
+    <h2 className='coininfo'> Price  {object2.price}</h2>
     {/* add all the necessary information */}
     
     </div>

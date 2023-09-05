@@ -1,24 +1,15 @@
 // import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Col ,Row} from 'antd';
-import '../App.css'
-const url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'e7aa6cb4f4msha003796ba1c786ep185107jsn23560cfa2098',
-		'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
-	}
-};
+import '../App.css';
+import arr from './Api';
 
+const convertToBillion = number => (number / 1e9).toFixed(2) + " Billion";
 
-const response = await fetch(url, options);
-	const result = await response.text();
-    const data = JSON.parse(result); 
-    var arr= data.data.coins;
-	console.log(data);
-  const firstTenItems = arr.slice(0, 10);
-console.log(firstTenItems);
+    var arr2= arr.coins;
+
+  const firstTenItems = arr2.slice(0, 10);
+
 
 // const cardStyle = {
 //   textAlign: 'center',
@@ -31,7 +22,9 @@ const Coins = (props) => {
 
     <>
     <div className=' crypto-card-container' >    
-         <h1 className='topCurr'> Top 10 Cryptocurrencies</h1>
+    <div className='tophead'>
+         <h1 className='topCurr'>Top-Ranked 10 Crypto Assets</h1>
+         </div>
      <Row gutter={[32, 32]} className="crypto-card-container , homepadd">
      <br/>
       {firstTenItems.map(item => 
@@ -53,10 +46,14 @@ const Coins = (props) => {
                 extra={<img alt='none' className="crypto-image" src={item.iconUrl} />}
                 hoverable
               >
-                <p className='cardInfo'> Rank :  {item.rank} </p>
-                <p className='cardInfo'> Symbol : {item.symbol}</p>
-                < p className='cardInfo'>Price in USD : {Math.floor(item.price * 100) / 100}</p>
-                <p className='cardInfo'> Market cap : {item.marketCap}</p>
+                <span className='cardInfo1' > Rank :</span> <span className='cardInfo'>{item.rank}</span>  
+                <br/>
+                < span className='cardInfo1'>Price : </span> <span className='cardInfo'>$‎ {Math.floor(item.price * 100) / 100} </span> 
+                <br/>
+                <span className='cardInfo1'> Symbol :</span>   <span className='cardInfo'>{item.symbol}</span>
+                <br/>
+                
+                <span className='cardInfo1'> Market cap : </span> <span className='cardInfo'> {convertToBillion(item.marketCap)}</span>
 
 
               </Card>

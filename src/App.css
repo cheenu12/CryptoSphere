@@ -7,13 +7,17 @@
 
 body
 
-{
- 
-    background: radial-gradient(circle, rgb(56, 52, 52), rgb(70, 70, 61), black);
+{ 
   color: white;
 }
 /* ... (your existing CSS rules) ... */
 
+.app
+{
+  background-color: #ffff34;
+background-image: linear-gradient(0deg, #ffff34 0%, #000000 71%);
+
+}
 .fade-in {
   opacity: 0;
   animation: fadeInAnimation 1s ease-in-out forwards;
@@ -33,17 +37,19 @@ body
 
 .logo
 {
-  height: 4rem;
-  width: 4rem;
+  height: 3.5rem;
+  width: 3.5rem;
   position: absolute;
-  margin-top: 0.4rem;
-  margin-left: 1rem;
+  margin-top: 0.6rem;
+  margin-left: 4rem;
   border-radius: 3rem;
 
 }
 .navbar
 {
-  background-color:gold;
+  background-color: #ffe600;
+  background-image: linear-gradient(43deg, #ffe600 30%, #ffffff 92%);
+  
 height: 4.7rem;
 
 }
@@ -51,7 +57,7 @@ height: 4.7rem;
 .navTitle
 {
 color: black;
-margin-left: 6rem;
+margin-left: 8rem;
 padding-top: 1.5rem;
 font-family: "Neue Haas Grotesk Text Pro", sans-serif;;
 
@@ -60,13 +66,21 @@ font-family: "Neue Haas Grotesk Text Pro", sans-serif;;
 {
   /* color: #ffffff; */
   text-align: center;
+  color: black;
 
 }
 
+.tophead
+{
+  height: 3rem;
+  background-color: #ffe600;
+  background-image: linear-gradient(43deg, #ffe600 30%, #ffffff 92%);
+  height: 3rem;
+    width: 30rem;
+ 
+    margin-left: 30rem
 
-
-
-
+}
 
 /* global stats */
 .stats
@@ -87,10 +101,28 @@ font-family: "Neue Haas Grotesk Text Pro", sans-serif;;
 
   font-size: 2rem;
 }
+.cardyo
+{
+  border-radius: 2rem;
+  background-color: #ffffff;
+  background-image: linear-gradient(160deg, #ffffff 0%, #f3eb8a 100%);
+}
+.cardInfo1
+{
+ 
+  font-size: 1rem;
+  font-weight: 200;
+
+}
 
 .cardInfo{
-  font-size: 1rem;
-font-weight: 700;
+
+  color: rgb(11, 11, 12);
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-left: 0.3rem;
+  text-align: center;
+
 }
 
 .crypto-card
@@ -118,11 +150,18 @@ font-size: 1.5rem;
   width:100px;
   
 }
+.coininfo
+{
+  color: #dce418;
+}
 
 .global
 {
 
-  background-color:white;
+ 
+  background-color: #ffffff;
+background-image: linear-gradient(160deg, #ffffff 0%, #f3eb8a 100%);
+
   color: black;
   padding: 10px;
   padding-left: 2rem;
@@ -242,13 +281,13 @@ font-size: 1.5rem;
   .navbar{
     background-color: black;
     height: 4.7rem;
-    width: 34rem;
+    width: 100%;
   }
 
   .navOfNews
 {
   position: absolute;
-    margin-left: 10rem;
+    margin-left: 8rem;
     margin-top: 25rem;
     
 }
@@ -268,11 +307,14 @@ font-size: 1.5rem;
   padding-right: 1rem;
 
 }
+.news-item{
+  padding-left:1rem ;
+}
 .newsImg{
   width: 110px;
   height: 75px;
   position: absolute;
-  margin-left: 25rem;
+  margin-left: 13rem;
   border-radius: 1rem;
   margin-top: 1rem;
 }
@@ -281,7 +323,7 @@ font-size: 1.5rem;
 {
   color: blue;
   position: absolute;
-  margin-left: 27.3rem;
+  margin-left: 15rem;
   margin-top: 6rem;
 
 }
@@ -294,9 +336,29 @@ font-size: 1.5rem;
 {
 color: black;
 font-weight: 400;
-margin-left: 6rem;
+margin-left: 5rem;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.logo
+{
+  margin-left: 1rem;
+
 }
+.tophead
+{
+  height: 3rem;
+  background-color: #ffe600;
+  background-image: linear-gradient(43deg, #ffe600 30%, #ffffff 92%);
+  height: 2rem;
+    width: 100%;
+    margin-left: 0.001rem;
+
+
+}
+.topCurr{
+  font-size: 1.3rem;
+}
+}
+
 
 

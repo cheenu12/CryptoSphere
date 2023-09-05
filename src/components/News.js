@@ -1,29 +1,16 @@
 import React from 'react'
 import { Col, Row } from 'antd';
 import Latestnews from './Latestnews';
-
-const url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'e7aa6cb4f4msha003796ba1c786ep185107jsn23560cfa2098',
-		'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
-	}
-};
-
+import arr from './Api';
 const convertToTrillion = number => (number / 1e12).toFixed(2) + " Trillion";
 const convertToBillion = number => (number / 1e9).toFixed(2) + " Billion";
 
-const response = await fetch(url, options);
-	const result = await response.text();
-    const data = JSON.parse(result); 
-    var arr= data.data.stats;
-	console.log(arr);
-    var total = arr.totalCoins;
-    var  marketCap = convertToTrillion(arr.totalMarketCap);
-    var exchange = arr.totalExchanges;
-    var market = arr.totalMarkets;
-    var vol = convertToBillion(arr.total24hVolume);
+var arr2 = arr.stats;
+    var total = arr2.totalCoins;
+    var  marketCap = convertToTrillion(arr2.totalMarketCap);
+    var exchange = arr2.totalExchanges;
+    var market = arr2.totalMarkets;
+    var vol = convertToBillion(arr2.total24hVolume);
 const News = () => {
   return (
     <div>
